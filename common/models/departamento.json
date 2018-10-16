@@ -1,0 +1,28 @@
+{
+  "name": "Departamento",
+  "plural": "departamentos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "departamento": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sitios": {
+      "type": "hasMany",
+      "model": "Sitio",
+      "foreignKey": "departamentoId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
